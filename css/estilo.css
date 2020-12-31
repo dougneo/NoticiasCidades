@@ -79,3 +79,117 @@ body.fotos #navegacao a#fotos {
     background: #de003e;
     cursor: text;
 }
+
+
+/* Configura layout de três colunas */
+
+#conteudo {
+    margin-top: 60px;
+    background: #f5f5f5;
+}
+
+#primario {
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 195px;
+    background: blue;
+}
+
+#duas-colunas #primario {
+    width: 555px;
+}
+
+#uma-colunas #primario {
+    width: 750px;
+}
+
+#secundario {
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 15px;
+    background: green;
+}
+
+#lateral {
+    width: 180px;
+    float: left;
+    margin: 0 0 20px -750px;
+}
+
+
+/* Caixa */
+
+.caixa {
+    margin: 10px 0;
+    padding: 5px;
+    background: #f3f3f3 url(../imagens/fundo-caixa.png);
+}
+
+h2 {
+    font-size: 1em;
+    background: #294c71;
+    color: #fff;
+    padding: 5px;
+}
+
+.caixa-conteudo {
+    background: #fff;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+
+/* Ajustes da Lateral */
+
+#lateral ul a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 0.9em;
+    padding: 3px;
+    line-height: 30px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#lateral li a:hover {
+    background: #f9f9f9 url(../imagens/marcador.png) no-repeat left center;
+    padding-left: 20px;
+    color: #a1a1a1;
+}
+
+
+/* Formantando Formularios */
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+input {
+    font-size: 0.9em;
+    background-color: #fff;
+    padding: 5px;
+    width: 125px;
+}
+
+input.submit {
+    width: 80px;
+    color: #fff;
+    background: #b10333;
+    border: 2px solid #870529;
+}
+
+
+/* Rodape */
+
+#container-rodape {
+    background: #294c71;
+    padding: 20px;
+    clear: both;
+}
+
+#rodape {
+    width: 750px;
+    padding: 0 auto;
+    color: #fff;
+}
