@@ -14,13 +14,11 @@ body {
 #container {
     width: 750px;
     margin: 0 auto;
-    border: 1px solid red;
 }
 
 #topo {
     height: 150px;
     background: url(../imagens/detalhe-topo.png)no-repeat right top;
-    border: 1px solid red;
     padding-top: 25px;
 }
 
@@ -149,7 +147,7 @@ h2 {
     border-bottom: 1px solid #f3f3f3;
 }
 
-#lateral li a:hover {
+#lateral ul a:hover {
     background: #f9f9f9 url(../imagens/marcador.png) no-repeat left center;
     padding-left: 20px;
     color: #a1a1a1;
@@ -180,10 +178,6 @@ input.submit {
 
 /* Formatando Imagens */
 
-img {
-    border: 2px solid #dfdfdf;
-}
-
 img.imagem-principal {
     width: 98%;
     border: 3px solid #dfdfdf;
@@ -207,6 +201,39 @@ h3 {
 .entrevista h3 {
     background: red;
     color: #000;
+}
+
+
+/* Formantando Lista de noticias */
+
+#lista-noticias li {
+    padding: 2px;
+    border-bottom: 1px solid #ccc;
+    height: 62px;
+}
+
+#lista-noticias li a img {
+    float: left;
+    margin: 5px;
+}
+
+#lista-noticias li a {
+    text-decoration: none;
+}
+
+#lista-noticias li a h3 {
+    font-size: 0.8em;
+    padding: 0;
+    color: #3e7ab9;
+}
+
+#lista-noticias li a p {
+    font-size: 0.7em;
+}
+
+#lista-noticias li:hover {
+    background: #eee;
+    cursor: pointer;
 }
 
 

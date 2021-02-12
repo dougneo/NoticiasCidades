@@ -1,0 +1,495 @@
+/* ===== FORMATAÇÃO RODAPÉ ===== */
+    
+    #rodape {
+        clear: both;
+        text-align: center;
+        padding: 15px;
+        background: #CCC;
+    }
+
+/* ===== FORMATAÇÃO DO POPUP NO @MEDIA ===== */    
+@media (max-width: 374px) {
+    #formulario {
+        width: 250px;
+        height: 450px;
+        padding: 0px 13px;
+        background: #43BD4E;
+        border-radius: 8px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+        display: none;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 2rem;
+        margin-right: 1rem;
+        animation: abrir_modal;
+        animation-duration: 0.7s;
+    }
+        /* Campos de digitação do @media */
+    #nome-formulario {
+        width: 230px;
+        height: 35px;
+        margin: 5px 0px 20px 0px;
+    }
+    #caixa-numeros {
+        margin: 0px auto;
+        width: 250px;
+    }
+    #numero {
+        width: 175px;
+        height: 35px;
+        margin: 5px 0px 10px 0px;
+        padding: 0px 10px;
+    }
+    #numero-pais {
+        width: 30px;
+        height: 35px;
+        margin-right: 0.5px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 0px 8px;
+    }
+        /*Formatação botão enviar */
+    button {
+        border: 1px solid white !important;
+        width: 135px;
+        height: 35px;
+        font-size: 18px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background: #43BD4E;
+        color: #fff;
+        margin-top: 10px;
+        position: relative;
+        padding: initial;
+        z-index: 1;
+        outline: none;
+    }
+}
+@media (max-width: 374px) {
+    #formulario {
+        width: 250px;
+        height: 450px;
+        padding: 0px 13px;
+        background: #43BD4E;
+        border-radius: 8px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+        display: none;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 2rem;
+        margin-right: 1rem;
+        animation: abrir_modal;
+        animation-duration: 0.7s;
+        padding-bottom: 10px;
+    }
+    #nome-formulario {
+        width: 230px;
+        height: 35px;
+        margin: 5px 0px 20px 0px;
+    }
+    #caixa-numeros {
+        margin: 0px auto;
+        width: 250px;
+    }
+    #numero {
+        width: 175px;
+        height: 35px;
+        margin: 5px 0px 10px 0px;
+        padding: 0px 10px;
+    }
+    #numero-pais {
+        width: 30px;
+        height: 35px;
+        margin-right: 0.5px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 0px 8px;
+    }
+    button {
+        border: 1px solid white !important;
+        width: 135px;
+        height: 35px;
+        font-size: 18px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background: #43BD4E;
+        color: #fff;
+        margin-top: 10px;
+        position: relative;
+        padding: initial;
+        z-index: 1;
+        outline: none;
+    }
+}
+
+@media (max-height:500px) {
+    div#formulario {
+        max-height: 90%;
+        overflow-y: scroll;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 1rem;
+        margin-right: 0.5rem;
+    }
+    button {
+        margin-top: 10px;
+    }
+    button.slide_from_left {
+        overflow: hidden;
+        bottom: 15px;
+    }
+    #caixa-numeros {
+        margin: 0px auto;
+        width: 290px;
+        position: relative;
+        bottom: 13px;
+    }
+}
+
+@media (max-height:572px) {
+    div#popup {
+        max-height: 600px;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media (orientation: landscape) and (max-height:320px) {
+    div#popup {
+        max-height: 320px;
+        right: 0px;
+        bottom: 0px;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    #makeli {
+        max-height: 230px;
+    }
+}
+
+@media (orientation: landscape) and (min-height:321px) and (max-height:380px) {
+    div#popup {
+        max-height: 360px;
+        right: 0px;
+        bottom: 0px;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    #makeli {
+        max-height: 268px;
+    }
+}
+
+@media (orientation: landscape) and (min-height:381px) and (max-height:540px) {
+    div#popup {
+        max-height: 540px;
+        right: 0px;
+        bottom: 0px;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    #makeli {
+        max-height: 320px;
+    }
+}
+
+/* ===== FORMATAÇÃO FORMULÁRIO ===== */ 
+#formulario {
+    width: 300px;
+    height: 500px;
+    padding: 0px 13px;
+    background: #43BD4E;
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    animation: abrir_modal;
+    animation-duration: 0.4s;
+    -webkit-animation: abrir_modal;
+    -webkit-animation-duration: 0.4s;
+}
+
+/* ===== DIVS QUE ABRIGAM OS ITENS DO FORMULARIO ===== */    
+#caixa-numeros {
+    margin: 0px auto;
+    width: 290px;
+}
+    
+#container-numeros {
+    margin: 0px auto;
+    width: 290px;
+
+}
+/* ===== CLASSE DO CURSOR PARA MÃOZINHA ===== */
+.cursor-mouse {
+    cursor: pointer;
+}
+
+/* ===== NOME OPERADOR ===== */   
+#nome-operador {
+    padding: 20px 0px 20px 0px;
+}
+    
+#nome {
+    font-family: "Arial";
+    font: bold;
+}
+/* ===== FOTO DO OPERADOR ===== */
+    
+#foto-perfil {
+    padding-top: 20px;
+    clear: both;
+    border-color: 3px solid #87cefa;
+}
+    
+#imagem-rosto {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 44px;
+    border: 2px solid white;
+}
+    
+/* ===== BOTÃO X DE FECHAR ===== */
+#botao-xis {
+    padding-top: 13px;
+    float: right;
+    font-size: 1.3rem;
+}
+/* X fechar Mini Modal */
+#segundo_xis{
+    margin-left: 93%;
+    padding-top: 13px; 
+    font-size: 1.3rem;
+}
+#area_do_xis2{
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+/* ===== CAMPOS DE TEXTO E TEXTO ===== */ 
+#vamos-nos-falar {
+    padding: 0px 0px 30px 0px;
+    font-style: italic;
+}
+
+/* Labels */
+#label-fomulario-nome {
+    padding: 0px 230px 0px 0px;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+    
+#label-fomulario-whatsapp {
+    display: block;
+    text-align: left;
+    text-indent: 10px;
+}
+
+/* ===== FORMATAÇÃO DOS CAMPOS DE DIGITAÇÃO ===== */ 
+#nome-formulario,
+#numero-pais,
+#numero {
+    border-style: none;
+    border-radius: 5px;
+    outline: none;
+}   
+#nome-formulario {
+    width: 255px;
+    height: 40px;
+    margin: 5px 0px 30px 0px;
+    padding: 0px 10px;
+}  
+#numero-pais {
+    width: 45px;
+    height: 40px;
+    margin-right: 3px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 0px 8px;
+}   
+#numero {
+    width: 190px;
+    height: 40px;
+    margin: 5px 0px 10px 0px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+}
+
+/* ========== BOTÃO CONFIRMAR ========== */    
+button {
+    border: 1px solid white !important;
+    width: 150px;
+    height: 45px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #43BD4E;
+    color: #fff;
+    margin-top: 10px;
+    position: relative;
+    padding: 10px 0px 10px 0px;
+    z-index: 1;
+    outline: none;
+}
+
+/* ===== ANIMAÇÃO DO BOTÃO ENVIAR ===== */    
+button.slide_from_left {
+    overflow: hidden;
+}    
+button:hover {
+    color: #43BD4E;
+}    
+button::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    display: block;
+}    
+button.slide_from_left::after {
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+}    
+button[class^="slide"]::after {
+    transition: all 0.6s;
+}    
+button[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.6s;
+}
+                                                                                                            /* ========== ANIMAÇÕES GERAIS ========== */
+/* ===== ANIMAÇÃO APARECER MODAL GRANDE ===== */    
+@keyframes abrir_modal {
+    from {
+        opacity: 0%;
+        height: 0px;
+    }
+    to {
+        opacity: 100%;
+        height: 500px;
+    }
+}
+/* ===== ANIMAÇÃO SUMIR MODAL GRANDE ===== */    
+@keyframes fechar_modal {
+    from {
+        opacity: 100%;
+        height: 500px
+    }
+    to {
+        opacity: 0%;
+        height: 0px;
+    }
+}
+
+
+/* ===== ANIMAÇAO APARECER MINI MODAL ===== */
+@keyframes abrir_mini_modal{
+    from {
+        opacity: 0%;
+        height: 0px;
+    }
+    to {
+        opacity: 100%;
+        height: 210px;
+    }
+}
+/* ===== ANIMAÇAO SUMIR MINI MODAL ===== */
+@keyframes fechar_mini_modal {
+    from{
+        opacity: 100%;
+        height: 210px;
+    }
+    to{
+        opacity: 0%;
+        height: 0px;
+    }
+}
+
+
+/* ===== FORMATAÇÃO DO MODAL SELETOR DE CANAL ===== */
+#seletor_canal {
+    width: 300px;
+    height: 210px;
+    padding: 0px 13px;
+    background: #43BD4E; 
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    animation: abrir_mini_modal;
+    animation-duration: 0.4s;
+}
+
+/* ===== DIVS DE CONTEÚDO DO MINI MODAL ===== */
+.conteudo_seletor1 {
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10%;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}    
+.conteudo_seletor2 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}    
+.conteudo_seletor3 {
+    width: 100%;
+    display: flex;
+    height: auto;
+    margin-top: 5%;
+    align-items: baseline;
+    justify-content: center;
+} 
+
+/* TEXTO "SELECIONE O CANAL" */
+#texto_selecione_canal {
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+    color: white;
+    position: relative;
+    height: 50%;
+}  
+
+/* FORMATAÇÃO DO INPUT PARA SELECIONAR CANAL */ 
+#input_seletor {
+    width: 75%;
+    height: 30px;
+    padding: 0px 8px;
+    border-style: none;
+    outline: none;
+    border-radius: 5px;
+}

@@ -6,9 +6,11 @@
         <title>Notícias Cidades - Seu site de notícias</title>
         <!-- Estilo Customizado -->
         <link rel="stylesheet" href="css/estilo.css">
+        <script src="https://kit.fontawesome.com/a7dcf3dbf5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/app.css">
     </head>
 
-    <body id="tres-colunas" class="home">
+    <body id="tres-colunas" class="home" onload="load();buscaID()">
 
         <div id="container">
             <!-- Inicio do Container -->
@@ -52,19 +54,44 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="">Leia mais!</a>
                         </div>
-
-                        <div class="caixa">
-                            <h2>Mundo</h2>
-                            <div class="caixa-conteudo">
-                                conteudo<br> conteudo
-                                <br> conteudo
-                                <br> conteudo
-                                <br> conteudo
-                                <br>
-                            </div>
+                    </div>
+                    <div class="caixa">
+                        <h2>Mundo</h2>
+                        <div class="caixa-conteudo">
+                            <ul id="lista-noticias">
+                                <li>
+                                    <a href>
+                                        <img src="imagens/tecnologia.jpg" width="80">
+                                        <h3>Novas Tecnlogias!</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href>
+                                        <img src="imagens/tecnologia.jpg" width="80">
+                                        <h3>Novas Tecnlogias!</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href>
+                                        <img src="imagens/tecnologia.jpg" width="80">
+                                        <h3>Novas Tecnlogias!</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href>
+                                        <img src="imagens/tecnologia.jpg" width="80">
+                                        <h3>Novas Tecnlogias!</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
                 <div id="secundario">
                     <div class="caixa entrevista'">
                         <h2>Última Entrevista</h2>
@@ -74,19 +101,44 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="">Leia mais!</a>
                         </div>
-
-                        <div class="caixa">
-                            <h2>Notícias recentes</h2>
-                            <div class="caixa-conteudo">
-                                conteudo<br> conteudo
-                                <br> conteudo
-                                <br> conteudo
-                                <br> conteudo
-                                <br>
-                            </div>
+                    </div>
+                    <div class="caixa">
+                        <h2>Notícias recentes</h2>
+                        <div class="caixa-conteudo">
+                            <ul id="lista-noticias">
+                                <li>
+                                    <a href="">
+                                        <img src="imagens/tecnologia.jpg" width="80">
+                                        <h3>Novas Tecnlogias!</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="imagens/tecnologia.jpg" width="80">
+                                        <h3>Novas Tecnlogias!</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="imagens/tecnologia.jpg" width="80">
+                                        <h3>Novas Tecnlogias!</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="imagens/tecnologia.jpg" width="80">
+                                        <h3>Novas Tecnlogias!</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
                 <div id="lateral">
                     <div class="caixa">
                         <h2>Entrevista</h2>
@@ -129,6 +181,90 @@
                 &copy; Copyright 2000-2018 Noticias Cidade
             </div>
         </div>
+        
+            <!-- INICIO DO POPUP -->
+            <div id="content">
+                <!-- ===== INÍCIO DOS BOTÕES DE WHATSAPP E OPERADOR ===== -->
+                <div id="popup">
+                    <div id="minhaDiv">
+                        <ul class="perfis" id="makeli">
+                            <!-- LI CRIADAS DINAMICAMENTE VIA JS -->
+                        </ul>
+                    </div>
+                    <div class="botao-titulo">
+                        <span id="btnzap" type="button" onclick="Mudarestado('minhaDiv')">
+                            <i class="fa fa-whatsapp whatsapp cursor-mouse pulse-button" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- ===== FIM DOS BOTÕES DE WHATSAPP E OPERADOR ===== -->
+    
+    
+    
+                <!-- ===== INÍCIO DO FORMÁRIO MODAL ===== -->
+                <div id="formulario" class="shadow-xl">
+    
+    
+                    <i id="botao-xis" class="fas fa-times-circle cursor-mouse" aria-hidden="true"
+                        onmousedown="fecharCadastro('formulario')"></i>
+    
+    
+                    <div id="foto-perfil">
+                        <!-- FOTO CARREGADA DINAMICAMENTE VIA JS -->
+                    </div>
+                    <div id="nome-operador">
+                        <!-- NOME CARREGADA DINAMICAMENTE VIA JS -->
+                    </div>
+                    <div id="vamos-nos-falar">
+                        <span> Vamos nos falar um pouco? </span>
+                    </div>
+                    <form id="formZap" onsubmit="return validar()" name="nameAndCel" method="">
+                        <div id="campo-de-texto">
+                            <div class="container-numeros">
+                                <label for="formulario-de-nome" id="label-fomulario-nome"> Nome </label>
+                                <input type="text" class="text-gray-600, inputFormulario" name="formulario-de-nome"
+                                    id="nome-formulario" required>
+                            </div>
+                            <div class="container-numeros">
+                                <div id="caixa-numeros">
+                                    <label for="formulario-de-numero-pais" id="label-fomulario-whatsapp"> WhatsApp </label>
+                                    <input type="text" class="text-gray-600, inputFormulario" placeholder="+55"
+                                        maxlength="5" name="formulario-de-numero-pais" id="numero-pais" required>
+                                    <input type="text" class="text-gray-600, inputFormulario" name="formulario-de-numero"
+                                        id="numero" required>
+                                </div>
+                            </div>
+                            <div id="canal">
+                                <!-- Botão "enviar" ou "continuar" sendo gerado dinamicamante-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="overlay">
+                    <div id="seletor_canal" class="shadow-xl">
+                        <div id="area_do_xis2">
+                            <i id="segundo_xis" class="fas fa-times-circle cursor-mouse" aria-hidden="true"
+                                onmousedown="fecharMiniModal('seletor_canal');btnDefault()"></i>
+                        </div>
+                        <div class="conteudo_seletor1">
+                            <span id="texto_selecione_canal" class="text-md font-thin">Selecione o Canal</span>
+                        </div>
+                        <div class="conteudo_seletor2">
+                            <select name="canais" id="input_seletor" class="text-gray-600">
+                                <option value="selecione">Escolha um canal</option>
+                            </select>
+                        </div>
+                        <div class="conteudo_seletor3">
+                            <button type="button" class="slide_from_left " id="checkBotao botao_canal" required> ENVIAR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===== FIM DO FORMULARIO MODAL ===== -->
+            <script src="app.js"></script>
+            </div>
+            <!-- TERMINO DO POPUP -->
         <!-- Fim do Rodape -->
     </body>
 
